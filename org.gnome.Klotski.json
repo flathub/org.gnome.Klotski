@@ -6,7 +6,7 @@
     "command": "gnome-klotski",
     "finish-args": [
         /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
+        "--share=ipc", "--socket=fallback-x11",
         /* Wayland access */
         "--socket=wayland"
     ],
@@ -14,23 +14,19 @@
         {
             "name": "libgnome-games-support",
             "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
-                    "tag": "1.6.0.1",
-                    "commit": "0aca5d736973e69972e1dd79f55a233971fbae7e"
-                }
-            ]
+            "sources": [{
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libgnome-games-support/1.6/libgnome-games-support-1.6.1.tar.xz",
+                "sha256": "fb686af62e24dc33f26c581aa019fcdf3605787dd76cb59ac99a8a34d1b808bf"
+            }]
         },
         {
             "name": "gnome-klotski",
             "buildsystem": "meson",
             "sources": [{
-                "type": "git",
-                "url": "https://gitlab.gnome.org/GNOME/gnome-klotski.git",
-                "tag": "3.36.0",
-                "commit": "c4e7e18808cde7bd4318667ba6db298c3fb6a2bb"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/gnome-klotski/3.36/gnome-klotski-3.36.3.tar.xz",
+                "sha256": "df3cb120474ec27a119a7e3214842c59c852a1322136d03a24abc98b2785413a"
             }]
         }
     ]
