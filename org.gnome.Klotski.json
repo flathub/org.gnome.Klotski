@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Klotski",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-klotski",
     "finish-args": [
@@ -16,8 +16,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://download.gnome.org/sources/libgnome-games-support/1.6/libgnome-games-support-1.6.1.tar.xz",
-                "sha256": "fb686af62e24dc33f26c581aa019fcdf3605787dd76cb59ac99a8a34d1b808bf"
+                "url": "https://download-fallback.gnome.org/sources/libgnome-games-support/1.8/libgnome-games-support-1.8.1.tar.xz",
+                "sha256": "c37b7acd3ba7eb12207f5d7bb020535fa5783b0bd897e51b2bd629ce119a413f"
             }]
         },
         {
@@ -25,8 +25,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://download.gnome.org/sources/gnome-klotski/3.36/gnome-klotski-3.36.3.tar.xz",
-                "sha256": "df3cb120474ec27a119a7e3214842c59c852a1322136d03a24abc98b2785413a"
+                "url": "https://download.gnome.org/sources/gnome-klotski/3.38/gnome-klotski-3.38.2.tar.xz",
+                "sha256": "91637845649f3ca709d29f71ee775b946d1112087209f32264e8fad21a0ca0e2"
             }]
         }
     ]
