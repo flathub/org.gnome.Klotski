@@ -1,0 +1,13 @@
+diff --git a/src/klotski-window.vala b/src/klotski-window.vala
+index a3f1e6a..dfb28e3 100644
+--- a/src/klotski-window.vala
++++ b/src/klotski-window.vala
+@@ -475,7 +475,7 @@ private class KlotskiWindow : ApplicationWindow
+ 
+     private static string normalize_map_name (string name)
+     {
+-        return name.down ().replace (" ", "-");
++        return name.replace("I", "i").replace(" ", "-").down();
+     }
+ 
+     class construct

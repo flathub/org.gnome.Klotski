@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Klotski",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-klotski",
     "finish-args": [
@@ -10,6 +10,17 @@
         "--socket=fallback-x11",
         /* Wayland access */
         "--socket=wayland"
+    ],
+    "cleanup": [
+        "/include",
+        "/man",
+        "/share/aclocal",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/vala",
+        "*.la",
+        "*.a"
     ],
     "modules": [
         {
@@ -24,11 +35,21 @@
         {
             "name": "gnome-klotski",
             "buildsystem": "meson",
-            "sources": [{
-                "type": "archive",
-                "url": "https://download.gnome.org/sources/gnome-klotski/3.38/gnome-klotski-3.38.2.tar.xz",
-                "sha256": "91637845649f3ca709d29f71ee775b946d1112087209f32264e8fad21a0ca0e2"
-            }]
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-klotski/3.38/gnome-klotski-3.38.2.tar.xz",
+                    "sha256": "91637845649f3ca709d29f71ee775b946d1112087209f32264e8fad21a0ca0e2"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_turkish.patch"
+                }
+            ]
         }
     ]
 }
