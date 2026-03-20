@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Klotski",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-klotski",
     "finish-args": [
@@ -13,14 +13,9 @@
     ],
     "cleanup": [
         "/include",
-        "/man",
-        "/share/aclocal",
-        "/share/gtk-doc",
+        "/lib/pkgconfig",
         "/share/man",
-        "/share/pkgconfig",
-        "/share/vala",
-        "*.la",
-        "*.a"
+        "/share/vala"
     ],
     "modules": [
         {
@@ -43,11 +38,10 @@
                 },
                 {
                     "type": "patch",
-                    "path": "fix_appdata.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "fix_turkish.patch"
+                    "paths": [
+                      "fix_appdata.patch",
+                      "fix_turkish.patch"
+                    ]
                 }
             ]
         }
